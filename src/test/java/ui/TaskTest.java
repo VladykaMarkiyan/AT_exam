@@ -49,7 +49,7 @@ public class TaskTest {
 
     @AfterClass
     public void tearDown() throws InterruptedException {
-        Thread.sleep(2000); // щоб побачити результат
-        DriverPool.quitDriver(); // <-- ось це замість driver.quit()
+        Thread.sleep(2000);
+        DriverPool.quitDriver();
     }
 }
