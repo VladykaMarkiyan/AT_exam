@@ -35,7 +35,7 @@ public class LoginPage {
     @FindBy(xpath = "//span[@class='user-info']") //
     private WebElement userMenuButton;
 
-    @FindBy(xpath = "//a[@href='/logout_page.php']") // <- перевірити реальний xpath
+    @FindBy(xpath = "//a[@href='/logout_page.php']")
     private WebElement logoutButton;
 
     @FindBy(xpath = "//div[contains(@class,'alert')]")
