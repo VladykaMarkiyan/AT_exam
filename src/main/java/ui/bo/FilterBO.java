@@ -6,16 +6,16 @@ import ui.pages.LoginPage;
 
 public class FilterBO {
 
-    private FilterPage filterPage;
-    private LoginPage loginPage;
+    private final FilterPage filterPage;
+    private final LoginPage loginPage;
 
     public FilterBO(WebDriver driver) {
         this.filterPage = new FilterPage(driver);
-        this.loginPage = new LoginPage(driver); // 🔥 ОБОВ'ЯЗКОВО
+        this.loginPage = new LoginPage(driver);
     }
 
     public void goToBugBrowserTab() {
-        filterPage.clickBugBrowserTab();
+        filterPage.openBugBrowserTab();
     }
 
     public void clickSaveButton() {
@@ -27,11 +27,11 @@ public class FilterBO {
     }
 
     public void saveCurrentFilter() {
-        filterPage.clickSaveCurrentFilterButton();
+        filterPage.saveCurrentFilter();
     }
 
     public void applyFilter() {
-        filterPage.clickApplyFilterButton();
+        filterPage.applyFilter();
     }
 
     public void logout() {
@@ -40,19 +40,14 @@ public class FilterBO {
     }
 
     public boolean isBugBrowserPageOpened() {
-        return filterPage.isBugBrowserPageVisible();
+        return filterPage.isBugBrowserPageOpened();
     }
 
     public boolean isFilterNameFieldVisible() {
-        return filterPage.isFilterNameInputVisible();
-    }
-
-    public boolean isBackOnBugBrowserPage() {
-        return filterPage.isBugBrowserPageVisible();
+        return filterPage.isFilterNameFieldVisible();
     }
 
     public boolean isFilterApplied() {
-        return filterPage.isApplyFilterButtonVisible();
+        return filterPage.isFilterApplied();
     }
-
 }

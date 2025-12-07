@@ -40,7 +40,7 @@ public class FilterTest {
         filterBO.enterFilterName(filterName);
 
         filterBO.saveCurrentFilter();
-        Assert.assertTrue(filterBO.isBackOnBugBrowserPage());
+        Assert.assertTrue(filterBO.isBugBrowserPageOpened());
 
         filterBO.applyFilter();
         Assert.assertTrue(filterBO.isFilterApplied());

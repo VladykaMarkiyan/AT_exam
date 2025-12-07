@@ -1,6 +1,7 @@
 package core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,10 +15,13 @@ public class DriverPool {
     public static WebDriver getDriver() {
         if (driver.get() == null) {
             String browser = System.getProperty("browser", "chrome").toLowerCase();
+
             switch (browser) {
+
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
+                    setCommonOptions(chromeOptions);
                     chromeOptions.addArguments("--start-maximized");
                     driver.set(new ChromeDriver(chromeOptions));
                     break;
@@ -25,6 +29,7 @@ public class DriverPool {
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    setCommonOptions(firefoxOptions);
                     firefoxOptions.addArguments("--width=1920");
                     firefoxOptions.addArguments("--height=1080");
                     driver.set(new FirefoxDriver(firefoxOptions));
@@ -35,6 +40,14 @@ public class DriverPool {
             }
         }
         return driver.get();
+    }
+
+    private static void setCommonOptions(MutableCapabilities options) {
+
+        options.setCapability("pageLoadStrategy", "normal");
+
+
+
     }
 
     public static void quitDriver() {

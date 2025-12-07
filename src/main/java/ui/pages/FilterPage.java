@@ -1,22 +1,17 @@
 package ui.pages;
 
+import core.ElementActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class FilterPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final ElementActions actions;
 
     public FilterPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.actions = new ElementActions(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -35,47 +30,35 @@ public class FilterPage {
     @FindBy(xpath = "//input[@class='btn btn-primary btn-sm btn-white btn-round no-float']")
     private WebElement applyFilterButton;
 
-    public void clickBugBrowserTab() {
-        wait.until(ExpectedConditions.elementToBeClickable(bugBrowserTab)).click();
+    public void openBugBrowserTab() {
+        actions.click(bugBrowserTab);
     }
 
     public void clickSaveButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();
+        actions.click(saveButton);
     }
 
     public void enterFilterName(String name) {
-        wait.until(ExpectedConditions.visibilityOf(filterNameInput)).sendKeys(name);
+        actions.clearAndType(filterNameInput, name);
     }
 
-    public void clickSaveCurrentFilterButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(saveCurrentFilterButton)).click();
+    public void saveCurrentFilter() {
+        actions.click(saveCurrentFilterButton);
     }
 
-    public void clickApplyFilterButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(applyFilterButton)).click();
+    public void applyFilter() {
+        actions.click(applyFilterButton);
     }
 
-    public boolean isFilterNameInputVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(filterNameInput)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
+    public boolean isFilterNameFieldVisible() {
+        return actions.isVisible(filterNameInput);
     }
 
-    public boolean isBugBrowserPageVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(bugBrowserTab)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
+    public boolean isBugBrowserPageOpened() {
+        return actions.isVisible(bugBrowserTab);
     }
 
-    public boolean isApplyFilterButtonVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(applyFilterButton)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
+    public boolean isFilterApplied() {
+        return actions.isVisible(applyFilterButton);
     }
 }

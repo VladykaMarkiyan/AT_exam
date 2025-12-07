@@ -5,19 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+import core.ElementActions;
 
 public class TaskPage {
 
     private WebDriver driver;
-    private WebDriverWait wait;
+    private ElementActions actions;
 
     public TaskPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.actions = new ElementActions(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -39,8 +36,10 @@ public class TaskPage {
     @FindBy(xpath = "//input[@value='Додати проект']")
     private WebElement addProjectButton;
 
+    // ---------- Actions ----------
+
     public void clickManageTab() {
-        wait.until(ExpectedConditions.elementToBeClickable(manageTab)).click();
+        actions.click(manageTab);
     }
 
     public boolean isManageTabVisible() {
@@ -52,7 +51,7 @@ public class TaskPage {
     }
 
     public void clickProjectsTab() {
-        wait.until(ExpectedConditions.elementToBeClickable(projectsTab)).click();
+        actions.click(projectsTab);
     }
 
     public boolean isProjectsTabVisible() {
@@ -64,31 +63,24 @@ public class TaskPage {
     }
 
     public void clickCreateProjectButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(createProjectButton)).click();
-
-        wait.until(ExpectedConditions.visibilityOf(projectNameInput));
-        wait.until(ExpectedConditions.visibilityOf(projectDescriptionInput));
-        wait.until(ExpectedConditions.visibilityOf(addProjectButton));
+        actions.click(createProjectButton);
     }
 
     public void enterProjectName(String name) {
-        wait.until(ExpectedConditions.visibilityOf(projectNameInput)).clear();
-        projectNameInput.sendKeys(name);
+        actions.clearAndType(projectNameInput, name);
     }
 
     public void enterProjectDescription(String description) {
-        wait.until(ExpectedConditions.visibilityOf(projectDescriptionInput)).clear();
-        projectDescriptionInput.sendKeys(description);
+        actions.clearAndType(projectDescriptionInput, description);
     }
 
     public void clickAddProjectButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(addProjectButton)).click();
+        actions.click(addProjectButton);
     }
 
     public boolean isProjectVisible(String name) {
         try {
             WebElement projectLink = driver.findElement(By.xpath("//a[text()='" + name + "']"));
-            wait.until(ExpectedConditions.visibilityOf(projectLink));
             return projectLink.isDisplayed();
         } catch (Exception e) {
             return false;
@@ -97,10 +89,9 @@ public class TaskPage {
 
     public boolean isCreateProjectFormVisible() {
         try {
-            wait.until(ExpectedConditions.visibilityOf(projectNameInput));
-            wait.until(ExpectedConditions.visibilityOf(projectDescriptionInput));
-            wait.until(ExpectedConditions.visibilityOf(addProjectButton));
-            return true;
+            return projectNameInput.isDisplayed()
+                    && projectDescriptionInput.isDisplayed()
+                    && addProjectButton.isDisplayed();
         } catch (Exception e) {
             return false;
         }
