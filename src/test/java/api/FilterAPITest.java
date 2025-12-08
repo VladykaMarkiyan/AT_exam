@@ -1,6 +1,9 @@
 package api;
 
-import io.restassured.response.Response;
+import api.requests.LoginRequest;
+import api.requests.FilterRequest;
+import api.responses.LoginResponse;
+import api.responses.FilterResponse;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,20 +22,22 @@ public class FilterAPITest {
 
     @Test
     public void createFilterTest() {
-        Response loginResponse = loginAPI.login("administrator", "root");
+
+        LoginRequest loginRequest = new LoginRequest("administrator", "root");
+        LoginResponse loginResponse = loginAPI.login(loginRequest);
         Assert.assertEquals(loginResponse.getStatusCode(), 302);
 
-        String sessionId = loginResponse.getCookie("PHPSESSID");
-        Assert.assertNotNull(sessionId, "PHPSESSID має бути присутній після логіну");
+        String sessionId = loginResponse.getSessionId();
+        Assert.assertNotNull(sessionId);
 
-        Response allBugs = filterAPI.getAllBugs(sessionId);
-        Assert.assertEquals(allBugs.getStatusCode(), 200);
+        Assert.assertEquals(filterAPI.getAllBugs(sessionId).getStatusCode(), 200);
 
-        String filterName = "TestFilterAPI";
-        Response createFilter = filterAPI.createFilter(sessionId, filterName);
-        Assert.assertEquals(createFilter.getStatusCode(), 302);
+        FilterRequest filterRequest = new FilterRequest("TestFilterAPI", "status:open");
+        FilterResponse filterResponse = filterAPI.createFilter(sessionId, filterRequest);
+        Assert.assertEquals(filterResponse.getStatusCode(), 302);
+        Assert.assertNotNull(filterResponse.getFilterId());
 
-        Response logout = loginAPI.logout();
-        Assert.assertEquals(logout.getStatusCode(), 302);
+        LoginResponse logoutResponse = loginAPI.logout(sessionId);
+        Assert.assertEquals(logoutResponse.getStatusCode(), 302);
     }
 }
