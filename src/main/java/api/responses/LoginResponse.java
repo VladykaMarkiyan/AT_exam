@@ -3,14 +3,23 @@ package api.responses;
 import io.restassured.response.Response;
 
 public class LoginResponse {
-    private int statusCode;
-    private String sessionId;
+    private Response response;
 
     public LoginResponse(Response response) {
-        this.statusCode = response.getStatusCode();
-        this.sessionId = response.getCookie("PHPSESSID");
+        this.response = response;
     }
 
-    public int getStatusCode() { return statusCode; }
-    public String getSessionId() { return sessionId; }
+    public int getStatusCode() {
+        return response.getStatusCode();
+    }
+
+    public String getCookie(String name) {
+        return response.getCookie(name);
+    }
+
+    public Response getRawResponse() {
+        return response;
+    }
+
+
 }

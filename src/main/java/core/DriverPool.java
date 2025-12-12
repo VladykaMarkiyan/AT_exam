@@ -1,53 +1,43 @@
 package core;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverPool {
-
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
         if (driver.get() == null) {
-            String browser = System.getProperty("browser", "chrome").toLowerCase();
-
+            String browser = ConfigReader.get("browser").toLowerCase();
             switch (browser) {
-
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    setCommonOptions(chromeOptions);
-                    chromeOptions.addArguments("--start-maximized");
-                    driver.set(new ChromeDriver(chromeOptions));
+                    driver.set(createChromeDriver());
                     break;
-
                 case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    setCommonOptions(firefoxOptions);
-                    firefoxOptions.addArguments("--width=1920");
-                    firefoxOptions.addArguments("--height=1080");
-                    driver.set(new FirefoxDriver(firefoxOptions));
+                    driver.set(createFirefoxDriver());
                     break;
-
                 default:
-                    throw new IllegalArgumentException("Браузер не підтримується: " + browser);
+                    throw new RuntimeException("Unsupported browser: " + browser);
             }
+            setupWindow(driver.get());
         }
         return driver.get();
     }
 
-    private static void setCommonOptions(MutableCapabilities options) {
+    private static WebDriver createChromeDriver() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        return new ChromeDriver(options);
+    }
 
-        options.setCapability("pageLoadStrategy", "normal");
+    private static WebDriver createFirefoxDriver() {
+        return new FirefoxDriver();
+    }
 
-
-
+    private static void setupWindow(WebDriver driver) {
+        driver.manage().window().maximize();
     }
 
     public static void quitDriver() {

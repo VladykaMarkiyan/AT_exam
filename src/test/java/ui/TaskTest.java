@@ -3,9 +3,7 @@ package ui;
 import core.DriverPool;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import ui.bo.LoginBO;
 import ui.bo.TaskBO;
 
@@ -15,9 +13,6 @@ public class TaskTest {
     private LoginBO loginBO;
     private TaskBO taskBO;
 
-    private final String projectName = "MyTestProject";
-    private final String projectDescription = "Description for MyTestProject";
-
     @BeforeClass
     public void setUp() {
         driver = DriverPool.getDriver();
@@ -26,30 +21,28 @@ public class TaskTest {
         taskBO = new TaskBO(driver);
     }
 
-    @Test
-    public void loginAndCreateProjectTest() throws InterruptedException {
+    @DataProvider(name = "projects")
+    public Object[][] projects() {
+        return new Object[][] {
+                {"ProjectA", "Test description A"}
+        };
+    }
+
+    @Test(dataProvider = "projects")
+    public void createProjectTest(String name, String description) {
 
         loginBO.login("administrator", "root");
         Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
 
-        taskBO.goToManageTab();
-        Assert.assertTrue(taskBO.isManageTabVisible());
+        taskBO.openManageTab();
+        taskBO.openProjectsTab();
 
-        taskBO.goToManageProjects();
-        Assert.assertTrue(taskBO.isManageProjectsVisible());
+        taskBO.createProject(name, description);
 
-        taskBO.clickCreateProject();
-        Assert.assertTrue(taskBO.isCreateProjectFormVisible());
-
-        taskBO.enterProjectName(projectName);
-        taskBO.enterProjectDescription(projectDescription);
-
-        taskBO.clickAddProject();
     }
 
     @AfterClass
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
+    public void tearDown() {
         DriverPool.quitDriver();
     }
 }

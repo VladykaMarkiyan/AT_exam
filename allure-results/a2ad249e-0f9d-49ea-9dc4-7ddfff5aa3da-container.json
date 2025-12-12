@@ -1,0 +1,1 @@
+{"uuid":"a2ad249e-0f9d-49ea-9dc4-7ddfff5aa3da","name":"ui.TaskTest.setUp","children":["f55add01-f0ac-4e0c-a078-5b0a42946dc4"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1765491377126,"stop":1765491379052}],"afters":[],"start":1765491377124,"stop":1765491379052}

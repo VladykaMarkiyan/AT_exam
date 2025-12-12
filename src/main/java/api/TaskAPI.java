@@ -13,15 +13,14 @@ public class TaskAPI {
         this.baseUrl = baseUrl;
     }
 
-    public TaskResponse createTask(String sessionId, TaskRequest task) {
-        RequestSpecification req = RestAssured.given()
+    public Response createTask(String sessionId, String taskName, String description) {
+        return RestAssured.given()
                 .baseUri(baseUrl)
                 .cookie("PHPSESSID", sessionId)
-                .formParam("name", task.getName())
-                .formParam("description", task.getDescription())
-                .redirects().follow(false);
-
-        Response response = req.post("/manage_proj_create_page.php");
-        return new TaskResponse(response);
+                .formParam("name", taskName)
+                .formParam("description", description)
+                .redirects().follow(false)
+                .post("/task_create.php");
     }
+
 }

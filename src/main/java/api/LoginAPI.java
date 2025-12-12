@@ -7,6 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.response.Response;
 
 public class LoginAPI {
+
     private final String baseUrl;
 
     public LoginAPI(String baseUrl) {
@@ -14,23 +15,44 @@ public class LoginAPI {
     }
 
     public LoginResponse login(LoginRequest request) {
-        RequestSpecification req = RestAssured.given()
+        System.out.println("=== LOGIN REQUEST ===");
+        System.out.println("URL: " + baseUrl + "/login_page.php");
+        System.out.println("Username: " + request.getUsername());
+        System.out.println("Password: " + request.getPassword());
+
+        RequestSpecification spec = RestAssured.given()
                 .baseUri(baseUrl)
                 .formParam("username", request.getUsername())
                 .formParam("password", request.getPassword())
                 .redirects().follow(false);
 
-        Response response = req.post("/login_page.php");
+        Response response = spec.post("/login_page.php");
+
+        System.out.println("--- RESPONSE ---");
+        System.out.println("Status code: " + response.getStatusCode());
+        System.out.println("Body: " + response.asString());
+        System.out.println("Cookies: " + response.getCookies());
+        System.out.println("=================");
+
         return new LoginResponse(response);
     }
 
-    public LoginResponse logout(String sessionId) {
-        RequestSpecification req = RestAssured.given()
+    public LoginResponse logout() {
+        System.out.println("=== LOGOUT REQUEST ===");
+        System.out.println("URL: " + baseUrl + "/logout_page.php");
+
+        RequestSpecification spec = RestAssured.given()
                 .baseUri(baseUrl)
-                .cookie("PHPSESSID", sessionId)
                 .redirects().follow(false);
 
-        Response response = req.get("/account_page.php");
+        Response response = spec.get("/logout_page.php");
+
+        System.out.println("--- RESPONSE ---");
+        System.out.println("Status code: " + response.getStatusCode());
+        System.out.println("Body: " + response.asString());
+        System.out.println("Cookies: " + response.getCookies());
+        System.out.println("=================");
+
         return new LoginResponse(response);
     }
 }

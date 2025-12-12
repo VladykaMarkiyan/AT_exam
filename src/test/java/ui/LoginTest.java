@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ui.bo.LoginBO;
+import data.LoginDataProvider;
 
 public class LoginTest {
 
@@ -20,24 +21,21 @@ public class LoginTest {
         loginBO = new LoginBO(driver);
     }
 
-    @Test
-    public void invalidThenValidLoginTest() throws InterruptedException {
-        loginBO.login("wrongUser", "wrongPass");
-        Assert.assertTrue(loginBO.isErrorDisplayed());
+    @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
+    public void loginTest(String username, String password, boolean isSuccess) {
 
-        loginBO.login("administrator", "root");
-        Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
+        loginBO.login(username, password);
 
-        loginBO.logout();
-        System.out.println("Logout visible? " + loginBO.isLogoutButtonDisplayed());
-        Assert.assertFalse(loginBO.isLogoutButtonDisplayed());
+        if (isSuccess) {
+            Assert.assertTrue(loginBO.isLogoutButtonDisplayed(), "Logout button expected!");
+            loginBO.logout();
+        } else {
+            Assert.assertTrue(loginBO.isErrorDisplayed(), "Error expected!");
+        }
     }
 
     @AfterClass
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(2000); // щоб побачити результат
-        DriverPool.quitDriver(); // <-- ось це замість driver.quit()
+    public void tearDown() {
+        DriverPool.quitDriver();
     }
-
-
 }

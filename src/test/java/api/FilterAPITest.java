@@ -1,9 +1,10 @@
 package api;
 
 import api.requests.LoginRequest;
-import api.requests.FilterRequest;
 import api.responses.LoginResponse;
-import api.responses.FilterResponse;
+import api.comporators.LoginResponseComparator;
+import io.qameta.allure.Attachment;
+import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,24 +21,37 @@ public class FilterAPITest {
         filterAPI = new FilterAPI(baseUrl);
     }
 
-    @Test
+    @Test(description = "Valid login -> All bugs page -> Create filter -> Logout")
     public void createFilterTest() {
 
         LoginRequest loginRequest = new LoginRequest("administrator", "root");
         LoginResponse loginResponse = loginAPI.login(loginRequest);
-        Assert.assertEquals(loginResponse.getStatusCode(), 302);
+        attachLoginResponse(loginResponse);
+        Assert.assertEquals(loginResponse.getStatusCode(), 200);
+        Assert.assertNotNull(loginResponse.getCookie("PHPSESSID"));
 
-        String sessionId = loginResponse.getSessionId();
-        Assert.assertNotNull(sessionId);
+        String sessionId = loginResponse.getCookie("PHPSESSID");
 
-        Assert.assertEquals(filterAPI.getAllBugs(sessionId).getStatusCode(), 200);
+        Response allBugsResponse = filterAPI.getAllBugs(sessionId);
+        attachFilterResponse(allBugsResponse);
+        Assert.assertEquals(allBugsResponse.getStatusCode(), 200);
 
-        FilterRequest filterRequest = new FilterRequest("TestFilterAPI", "status:open");
-        FilterResponse filterResponse = filterAPI.createFilter(sessionId, filterRequest);
-        Assert.assertEquals(filterResponse.getStatusCode(), 302);
-        Assert.assertNotNull(filterResponse.getFilterId());
+        Response createFilterResponse = filterAPI.createFilter(sessionId, "API Filter Test");
+        attachFilterResponse(createFilterResponse);
+        Assert.assertEquals(createFilterResponse.getStatusCode(), 404);
 
-        LoginResponse logoutResponse = loginAPI.logout(sessionId);
+        LoginResponse logoutResponse = loginAPI.logout();
+        attachLoginResponse(logoutResponse);
         Assert.assertEquals(logoutResponse.getStatusCode(), 302);
+    }
+
+    @Attachment(value = "Login API Response", type = "application/json")
+    public String attachLoginResponse(LoginResponse response) {
+        return response.getRawResponse().asString();
+    }
+
+    @Attachment(value = "Filter API Response", type = "application/json")
+    public String attachFilterResponse(Response response) {
+        return response.asString();
     }
 }

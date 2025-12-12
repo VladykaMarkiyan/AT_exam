@@ -11,43 +11,26 @@ public class TaskBO {
         taskPage = new TaskPage(driver);
     }
 
-    public void goToManageTab() {
+    public void openManageTab() {
         taskPage.clickManageTab();
     }
 
-    public boolean isManageTabVisible() {
-        return taskPage.isManageTabVisible();
-    }
-
-    public void goToManageProjects() {
+    public void openProjectsTab() {
         taskPage.clickProjectsTab();
     }
 
-    public boolean isManageProjectsVisible() {
-        return taskPage.isProjectsTabVisible();
-    }
-
-    public void clickCreateProject() {
+    public void createProject(String name, String description) {
         taskPage.clickCreateProjectButton();
-    }
-
-    public boolean isCreateProjectFormVisible() {
-        return taskPage.isCreateProjectFormVisible();
-    }
-
-    public void enterProjectName(String name) {
         taskPage.enterProjectName(name);
-    }
-
-    public void enterProjectDescription(String description) {
         taskPage.enterProjectDescription(description);
-    }
-
-    public void clickAddProject() {
         taskPage.clickAddProjectButton();
     }
 
     public boolean isProjectVisible(String name) {
         return taskPage.isProjectVisible(name);
+    }
+
+    public boolean isCreateProjectFormVisible() {
+        return taskPage.isCreateProjectFormVisible();
     }
 }

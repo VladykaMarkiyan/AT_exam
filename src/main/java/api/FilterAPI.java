@@ -20,15 +20,13 @@ public class FilterAPI {
                 .get("/view_all_bug_page.php");
     }
 
-    public FilterResponse createFilter(String sessionId, FilterRequest filter) {
-        RequestSpecification req = RestAssured.given()
+    public Response createFilter(String sessionId, String filterName) {
+        return RestAssured.given()
                 .baseUri(baseUrl)
                 .cookie("PHPSESSID", sessionId)
-                .formParam("name", filter.getName())
-                .formParam("query", filter.getQuery())
-                .redirects().follow(false);
-
-        Response response = req.post("/query_store_page.php");
-        return new FilterResponse(response);
+                .formParam("filter_name", filterName)
+                .redirects().follow(false)
+                .post("/filter_create.php");
     }
+
 }
