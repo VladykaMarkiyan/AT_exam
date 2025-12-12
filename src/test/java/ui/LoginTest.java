@@ -27,10 +27,10 @@ public class LoginTest {
         loginBO.login(username, password);
 
         if (isSuccess) {
-            Assert.assertTrue(loginBO.isLogoutButtonDisplayed(), "Logout button expected!");
+            Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
             loginBO.logout();
         } else {
-            Assert.assertTrue(loginBO.isErrorDisplayed(), "Error expected!");
+            Assert.assertTrue(loginBO.isErrorDisplayed());
         }
     }
 

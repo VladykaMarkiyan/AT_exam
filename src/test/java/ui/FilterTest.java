@@ -16,7 +16,7 @@ public class FilterTest {
     @BeforeClass
     public void setUp() {
         driver = DriverPool.getDriver();
-        driver.get("http://localhost:8989/");  // сторінка логіну
+        driver.get("http://localhost:8989/");
         loginBO = new LoginBO(driver);
         filterBO = new FilterBO(driver);
     }
@@ -31,16 +31,13 @@ public class FilterTest {
     @Test(dataProvider = "filters")
     public void createAndApplyFilterTest(String filterName) {
 
-        // Логін
-        driver.get("http://localhost:8989/");  // переконаємось, що на логіні
+        driver.get("http://localhost:8989/");
         loginBO.login("administrator", "root");
         Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
 
-        // Перехід до Bug Browser
         filterBO.goToBugBrowserTab();
         Assert.assertTrue(filterBO.isBugBrowserPageOpened());
 
-        // Збереження нового фільтру
         filterBO.clickSaveButton();
         Assert.assertTrue(filterBO.isFilterNameFieldVisible());
 
@@ -49,7 +46,6 @@ public class FilterTest {
 
         Assert.assertTrue(filterBO.isBugBrowserPageOpened());
 
-        // Застосування фільтру
         filterBO.applyFilter();
         Assert.assertTrue(filterBO.isFilterApplied());
 

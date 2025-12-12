@@ -62,8 +62,8 @@ public class LoginPage {
     }
 
     public void enterUsername(String username) {
-        wait.until(ExpectedConditions.visibilityOf(usernameInput)); // чекаємо, поки поле буде видимим
-        usernameInput.clear(); // очищаємо поле перед набором
+        wait.until(ExpectedConditions.visibilityOf(usernameInput));
+        usernameInput.clear();
         usernameInputField.setText(username);
     }
 
