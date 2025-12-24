@@ -1,0 +1,10 @@
+api\FilterAPITest.class
+api\TaskAPITest.class
+data\ProjectDataProvider.class
+data\TaskDataProvider.class
+api\LoginAPITest.class
+data\LoginDataProvider.class
+ui\FilterTest.class
+ui\BaseUiTest.class
+ui\TaskTest.class
+ui\LoginTest.class

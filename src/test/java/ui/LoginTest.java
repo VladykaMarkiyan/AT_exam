@@ -1,30 +1,26 @@
 package ui;
 
-import core.DriverPool;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ui.bo.LoginBO;
 import data.LoginDataProvider;
 
-public class LoginTest {
+public class LoginTest extends BaseUiTest {
 
-    private WebDriver driver;
     private LoginBO loginBO;
 
-    @BeforeClass
-    public void setUp() {
-        driver = DriverPool.getDriver();
+    @BeforeMethod
+    public void init() {
         driver.get("http://localhost:8989/");
         loginBO = new LoginBO(driver);
     }
 
     @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
     public void loginTest(String username, String password, boolean isSuccess) {
-
         loginBO.login(username, password);
+
+        Assert.assertTrue(false, "Force fail to test screenshot attachment");
 
         if (isSuccess) {
             Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
@@ -32,10 +28,5 @@ public class LoginTest {
         } else {
             Assert.assertTrue(loginBO.isErrorDisplayed());
         }
-    }
-
-    @AfterClass
-    public void tearDown() {
-        DriverPool.quitDriver();
     }
 }

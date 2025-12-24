@@ -15,7 +15,6 @@
     </properties>
 
     <dependencies>
-        <!-- TestNG для початку -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -50,8 +49,6 @@
             <version>2.21.0</version>
             <scope>test</scope>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.hibernate.orm</groupId>

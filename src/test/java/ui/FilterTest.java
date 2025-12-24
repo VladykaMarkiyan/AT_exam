@@ -1,37 +1,30 @@
 package ui;
 
-import core.DriverPool;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 import ui.bo.FilterBO;
 import ui.bo.LoginBO;
 
-public class FilterTest {
+public class FilterTest extends BaseUiTest {
 
-    private WebDriver driver;
     private LoginBO loginBO;
     private FilterBO filterBO;
-
-    @BeforeClass
-    public void setUp() {
-        driver = DriverPool.getDriver();
-        driver.get("http://localhost:8989/");
-        loginBO = new LoginBO(driver);
-        filterBO = new FilterBO(driver);
-    }
 
     @DataProvider(name = "filters")
     public Object[][] filters() {
         return new Object[][] {
-                {"TestFilter"},
+                {"TestFilter"}
         };
     }
 
     @Test(dataProvider = "filters")
     public void createAndApplyFilterTest(String filterName) {
+        loginBO = new LoginBO(driver);
+        filterBO = new FilterBO(driver);
 
         driver.get("http://localhost:8989/");
+
         loginBO.login("administrator", "root");
         Assert.assertTrue(loginBO.isLogoutButtonDisplayed());
 
@@ -49,13 +42,7 @@ public class FilterTest {
         filterBO.applyFilter();
         Assert.assertTrue(filterBO.isFilterApplied());
 
-        // Логаут
         filterBO.logout();
         Assert.assertFalse(loginBO.isLogoutButtonDisplayed());
-    }
-
-    @AfterClass
-    public void tearDown() {
-        DriverPool.quitDriver();
     }
 }

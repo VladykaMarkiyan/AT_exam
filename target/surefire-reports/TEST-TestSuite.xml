@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="42.455" tests="8" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\marki\OneDrive\Робочий стіл\AT_exam\target\test-classes;C:\Users\marki\OneDrive\Робочий стіл\AT_exam\target\classes;C:\Users\marki\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\marki\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\marki\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\marki\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\marki\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\marki\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\marki\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\marki\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\marki\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\marki\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\marki\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\marki\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\marki\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-testng\2.21.0\allure-testng-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-test-filter\2.21.0\allure-test-filter-2.21.0.jar;C:\Users\marki\.m2\repository\org\hibernate\orm\hibernate-core\6.2.7.Final\hibernate-core-6.2.7.Final.jar;C:\Users\marki\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\marki\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\marki\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\marki\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\marki\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\marki\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\marki\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\marki\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\marki\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\marki\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\marki\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\marki\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\marki\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\marki\.m2\repository\com\h2database\h2\2.2.220\h2-2.2.220.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-java\4.24.0\selenium-java-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-api\4.24.0\selenium-api-4.24.0.jar;C:\Users\marki\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.24.0\selenium-chrome-driver-4.24.0.jar;C:\Users\marki\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.24.0\selenium-chromium-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-json\4.24.0\selenium-json-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.24.0\selenium-manager-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.24.0\selenium-devtools-v126-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v127\4.24.0\selenium-devtools-v127-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v128\4.24.0\selenium-devtools-v128-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.24.0\selenium-devtools-v85-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.24.0\selenium-edge-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.24.0\selenium-firefox-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-http\4.24.0\selenium-http-4.24.0.jar;C:\Users\marki\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.24.0\selenium-ie-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.24.0\selenium-remote-driver-4.24.0.jar;C:\Users\marki\.m2\repository\com\google\guava\guava\33.3.0-jre\guava-33.3.0-jre.jar;C:\Users\marki\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\marki\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\marki\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\marki\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\marki\.m2\repository\com\google\errorprone\error_prone_annotations\2.28.0\error_prone_annotations-2.28.0.jar;C:\Users\marki\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-api\1.41.0\opentelemetry-api-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-context\1.41.0\opentelemetry-context-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.41.0\opentelemetry-exporter-logging-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.41.0\opentelemetry-sdk-common-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.41.0\opentelemetry-sdk-extension-autoconfigure-spi-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.41.0\opentelemetry-sdk-extension-autoconfigure-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.41.0-alpha\opentelemetry-api-incubator-1.41.0-alpha.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.41.0\opentelemetry-sdk-trace-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.41.0\opentelemetry-sdk-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.41.0\opentelemetry-sdk-metrics-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.41.0\opentelemetry-sdk-logs-1.41.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-os\4.24.0\selenium-os-4.24.0.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.24.0\selenium-safari-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-support\4.24.0\selenium-support-4.24.0.jar;C:\Users\marki\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\marki\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\marki\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\marki\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\marki\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Bucharest"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="UA"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\marki\AppData\Local\Temp\surefire7951177007004229353\surefirebooter-20251224031447754_3.jar C:\Users\marki\AppData\Local\Temp\surefire7951177007004229353 2025-12-24T03-14-47_581-jvmRun1 surefire-20251224031447754_1tmp surefire_0-20251224031447754_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\marki\OneDrive\Робочий стіл\AT_exam\target\test-classes;C:\Users\marki\OneDrive\Робочий стіл\AT_exam\target\classes;C:\Users\marki\.m2\repository\org\testng\testng\7.8.0\testng-7.8.0.jar;C:\Users\marki\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\marki\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\marki\.m2\repository\org\webjars\jquery\3.6.1\jquery-3.6.1.jar;C:\Users\marki\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\marki\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\marki\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\marki\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\marki\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\marki\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\marki\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\marki\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\marki\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\marki\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-testng\2.21.0\allure-testng-2.21.0.jar;C:\Users\marki\.m2\repository\io\qameta\allure\allure-test-filter\2.21.0\allure-test-filter-2.21.0.jar;C:\Users\marki\.m2\repository\org\hibernate\orm\hibernate-core\6.2.7.Final\hibernate-core-6.2.7.Final.jar;C:\Users\marki\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\marki\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\marki\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\marki\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\marki\.m2\repository\io\smallrye\jandex\3.0.5\jandex-3.0.5.jar;C:\Users\marki\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\marki\.m2\repository\net\bytebuddy\byte-buddy\1.12.18\byte-buddy-1.12.18.jar;C:\Users\marki\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\marki\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\marki\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\marki\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\marki\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\marki\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\marki\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\marki\.m2\repository\com\h2database\h2\2.2.220\h2-2.2.220.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-java\4.24.0\selenium-java-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-api\4.24.0\selenium-api-4.24.0.jar;C:\Users\marki\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.24.0\selenium-chrome-driver-4.24.0.jar;C:\Users\marki\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.24.0\selenium-chromium-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-json\4.24.0\selenium-json-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.24.0\selenium-manager-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v126\4.24.0\selenium-devtools-v126-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v127\4.24.0\selenium-devtools-v127-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v128\4.24.0\selenium-devtools-v128-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.24.0\selenium-devtools-v85-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.24.0\selenium-edge-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.24.0\selenium-firefox-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-http\4.24.0\selenium-http-4.24.0.jar;C:\Users\marki\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.24.0\selenium-ie-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.24.0\selenium-remote-driver-4.24.0.jar;C:\Users\marki\.m2\repository\com\google\guava\guava\33.3.0-jre\guava-33.3.0-jre.jar;C:\Users\marki\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\marki\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\marki\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\marki\.m2\repository\org\checkerframework\checker-qual\3.43.0\checker-qual-3.43.0.jar;C:\Users\marki\.m2\repository\com\google\errorprone\error_prone_annotations\2.28.0\error_prone_annotations-2.28.0.jar;C:\Users\marki\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.25.0-alpha\opentelemetry-semconv-1.25.0-alpha.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-api\1.41.0\opentelemetry-api-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-context\1.41.0\opentelemetry-context-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.41.0\opentelemetry-exporter-logging-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.41.0\opentelemetry-sdk-common-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.41.0\opentelemetry-sdk-extension-autoconfigure-spi-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.41.0\opentelemetry-sdk-extension-autoconfigure-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-api-incubator\1.41.0-alpha\opentelemetry-api-incubator-1.41.0-alpha.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.41.0\opentelemetry-sdk-trace-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.41.0\opentelemetry-sdk-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.41.0\opentelemetry-sdk-metrics-1.41.0.jar;C:\Users\marki\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.41.0\opentelemetry-sdk-logs-1.41.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-os\4.24.0\selenium-os-4.24.0.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.24.0\selenium-safari-driver-4.24.0.jar;C:\Users\marki\.m2\repository\org\seleniumhq\selenium\selenium-support\4.24.0\selenium-support-4.24.0.jar;C:\Users\marki\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\marki\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\marki\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\marki\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\marki\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\marki\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\marki\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\marki\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\marki\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\marki\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\marki"/>
+    <property name="user.language" value="uk"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\marki\OneDrive\Робочий стіл\AT_exam"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\marki\AppData\Local\Temp\surefire7951177007004229353\surefirebooter-20251224031447754_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="marki"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\marki\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\marki\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="C:\Users\marki\OneDrive\Робочий стіл\AT_exam"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Vagrant\bin;C:\Program Files\Amazon\AWSCLIV2\;D:\;C:\Users\marki\AppData\Local\Microsoft\WindowsApps;C:\Users\marki\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\marki\Desktop\maincodes\Microsoft VS Code\bin;C:\Users\marki\AppData\Local\Programs\Fiddler;C:\Users\marki\AppData\Roaming\npm;C:\Users\marki\OneDrive\Робочий стіл\apache-maven-3.9.11\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="createFilterTest" classname="api.FilterAPITest" time="2.339">
+    <system-out><![CDATA[=== LOGIN REQUEST ===
+URL: http://localhost:8989/login_page.php
+Username: administrator
+Password: root
+--- RESPONSE ---
+Status code: 200
+Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/status_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/login.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/dropzone-5.5.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-3.4.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-datetimepicker-4.17.47.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-mantis.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-skins.min.css" />
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Text Search" href="http://localhost:8989/browser_search_plugin.php?type=text" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Issue Id" href="http://localhost:8989/browser_search_plugin.php?type=id" />
+	<script type="text/javascript" src="/javascript_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=f36c334d7cef843a28a60ae9669c88ad"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="login-layout light-login"><style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div class="main-container" id="main-container">
+<div class="main-content">
+<div class="row">
+<div class="col-md-offset-3 col-md-6 col-sm-10 col-sm-offset-1">
+	<div class="login-container">
+		<div class="space-12 hidden-480"></div>
+			<div class="login-logo">
+		<img src="/images/mantis_logo.png">
+	</div>
+			<div class="space-24 hidden-480"></div>
+
+<div class="position-relative">
+	<div class="signup-box visible widget-box no-border" id="login-box">
+		<div class="widget-body">
+			<div class="widget-main">
+				<h4 class="header lighter bigger">
+					<i class="ace-icon fa fa-sign-in"></i>
+					Login				</h4>
+				<div class="space-10"></div>
+	<form id="login-form" method="post" action="login_password_page.php">
+		<fieldset>
+
+			<input type="hidden" name="return" value="index.php" />
+			<label for="username" class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input id="username" name="username" type="text" placeholder="Username"
+						   size="32" maxlength="191" value="administrator"
+						   class="form-control autofocus">
+					<i class="ace-icon fa fa-user"></i>
+				</span>
+			</label>
+
+			<div class="space-10"></div>
+
+			<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110" value="Login" />
+		</fieldset>
+	</form>
+
+<div class="space-10"></div><div class="alert alert-warning"><p><strong>Warning:</strong> "admin" directory should be removed, or access to it restricted.</p><p><strong>Warning:</strong> You should disable the default 'administrator' account or change its password.</p></div></div>
+
+<div class="toolbar center"><a class="back-to-login-link pull-left" href="signup_page.php">Signup for a new account</a><div class="clearfix"></div></div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+</body>
+
+Cookies: {PHPSESSID=d5e643d79ccc584eb0d0aa15977c15b2}
+=================
+=== LOGOUT REQUEST ===
+URL: http://localhost:8989/logout_page.php
+--- RESPONSE ---
+Status code: 302
+Body: 
+Cookies: {PHPSESSID=e896c2f912d7c4c7dd7e5c75b0b70380, MANTIS_STRING_COOKIE=deleted, MANTIS_PROJECT_COOKIE=deleted, MANTIS_MANAGE_USERS_COOKIE=deleted, MANTIS_MANAGE_CONFIG_COOKIE=deleted}
+=================
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="invalidThenValidLoginTest" classname="api.LoginAPITest" time="0.323">
+    <system-out><![CDATA[=== LOGIN REQUEST ===
+URL: http://localhost:8989/login_page.php
+Username: wrongUser
+Password: wrongPass
+--- RESPONSE ---
+Status code: 200
+Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/status_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/login.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/dropzone-5.5.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-3.4.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-datetimepicker-4.17.47.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-mantis.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-skins.min.css" />
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Text Search" href="http://localhost:8989/browser_search_plugin.php?type=text" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Issue Id" href="http://localhost:8989/browser_search_plugin.php?type=id" />
+	<script type="text/javascript" src="/javascript_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=f36c334d7cef843a28a60ae9669c88ad"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="login-layout light-login"><style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div class="main-container" id="main-container">
+<div class="main-content">
+<div class="row">
+<div class="col-md-offset-3 col-md-6 col-sm-10 col-sm-offset-1">
+	<div class="login-container">
+		<div class="space-12 hidden-480"></div>
+			<div class="login-logo">
+		<img src="/images/mantis_logo.png">
+	</div>
+			<div class="space-24 hidden-480"></div>
+
+<div class="position-relative">
+	<div class="signup-box visible widget-box no-border" id="login-box">
+		<div class="widget-body">
+			<div class="widget-main">
+				<h4 class="header lighter bigger">
+					<i class="ace-icon fa fa-sign-in"></i>
+					Login				</h4>
+				<div class="space-10"></div>
+	<form id="login-form" method="post" action="login_password_page.php">
+		<fieldset>
+
+			<input type="hidden" name="return" value="index.php" />
+			<label for="username" class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input id="username" name="username" type="text" placeholder="Username"
+						   size="32" maxlength="191" value="wrongUser"
+						   class="form-control autofocus">
+					<i class="ace-icon fa fa-user"></i>
+				</span>
+			</label>
+
+			<div class="space-10"></div>
+
+			<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110" value="Login" />
+		</fieldset>
+	</form>
+
+<div class="space-10"></div><div class="alert alert-warning"><p><strong>Warning:</strong> "admin" directory should be removed, or access to it restricted.</p><p><strong>Warning:</strong> You should disable the default 'administrator' account or change its password.</p></div></div>
+
+<div class="toolbar center"><a class="back-to-login-link pull-left" href="signup_page.php">Signup for a new account</a><div class="clearfix"></div></div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+</body>
+
+Cookies: {PHPSESSID=39b7444c0ded00c3792ef0b4abfa7ade}
+=================
+=== Invalid login ===
+Status code: 200
+Session cookie: 39b7444c0ded00c3792ef0b4abfa7ade
+Short body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" con...
+==================
+=== LOGIN REQUEST ===
+URL: http://localhost:8989/login_page.php
+Username: administrator
+Password: root
+--- RESPONSE ---
+Status code: 200
+Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/status_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/login.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/dropzone-5.5.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-3.4.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-datetimepicker-4.17.47.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-mantis.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-skins.min.css" />
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Text Search" href="http://localhost:8989/browser_search_plugin.php?type=text" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Issue Id" href="http://localhost:8989/browser_search_plugin.php?type=id" />
+	<script type="text/javascript" src="/javascript_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=f36c334d7cef843a28a60ae9669c88ad"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="login-layout light-login"><style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div class="main-container" id="main-container">
+<div class="main-content">
+<div class="row">
+<div class="col-md-offset-3 col-md-6 col-sm-10 col-sm-offset-1">
+	<div class="login-container">
+		<div class="space-12 hidden-480"></div>
+			<div class="login-logo">
+		<img src="/images/mantis_logo.png">
+	</div>
+			<div class="space-24 hidden-480"></div>
+
+<div class="position-relative">
+	<div class="signup-box visible widget-box no-border" id="login-box">
+		<div class="widget-body">
+			<div class="widget-main">
+				<h4 class="header lighter bigger">
+					<i class="ace-icon fa fa-sign-in"></i>
+					Login				</h4>
+				<div class="space-10"></div>
+	<form id="login-form" method="post" action="login_password_page.php">
+		<fieldset>
+
+			<input type="hidden" name="return" value="index.php" />
+			<label for="username" class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input id="username" name="username" type="text" placeholder="Username"
+						   size="32" maxlength="191" value="administrator"
+						   class="form-control autofocus">
+					<i class="ace-icon fa fa-user"></i>
+				</span>
+			</label>
+
+			<div class="space-10"></div>
+
+			<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110" value="Login" />
+		</fieldset>
+	</form>
+
+<div class="space-10"></div><div class="alert alert-warning"><p><strong>Warning:</strong> "admin" directory should be removed, or access to it restricted.</p><p><strong>Warning:</strong> You should disable the default 'administrator' account or change its password.</p></div></div>
+
+<div class="toolbar center"><a class="back-to-login-link pull-left" href="signup_page.php">Signup for a new account</a><div class="clearfix"></div></div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+</body>
+
+Cookies: {PHPSESSID=a5a997100f840c7a540c8fefbb822720}
+=================
+=== Valid login ===
+Status code: 200
+Session cookie: a5a997100f840c7a540c8fefbb822720
+Short body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" con...
+==================
+=== LOGOUT REQUEST ===
+URL: http://localhost:8989/logout_page.php
+--- RESPONSE ---
+Status code: 302
+Body: 
+Cookies: {PHPSESSID=fc396f9e9adad473ca4c5d8ac7201c30, MANTIS_STRING_COOKIE=deleted, MANTIS_PROJECT_COOKIE=deleted, MANTIS_MANAGE_USERS_COOKIE=deleted, MANTIS_MANAGE_CONFIG_COOKIE=deleted}
+=================
+=== Logout ===
+Status code: 302
+Session cookie: fc396f9e9adad473ca4c5d8ac7201c30
+Short body: 
+==================
+]]></system-out>
+  </testcase>
+  <testcase name="createTaskTest" classname="api.TaskAPITest" time="0.206">
+    <system-out><![CDATA[=== LOGIN REQUEST ===
+URL: http://localhost:8989/login_page.php
+Username: administrator
+Password: root
+--- RESPONSE ---
+Status code: 200
+Body: <!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex,follow" />
+	<title>MantisBT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/status_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/login.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/dropzone-5.5.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-3.4.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/bootstrap-datetimepicker-4.17.47.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-mantis.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:8989/css/ace-skins.min.css" />
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Text Search" href="http://localhost:8989/browser_search_plugin.php?type=text" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: Issue Id" href="http://localhost:8989/browser_search_plugin.php?type=id" />
+	<script type="text/javascript" src="/javascript_config.php?cache_key=c4be5b616506fadd81f3b808db1767f3"></script>
+	<script type="text/javascript" src="/javascript_translations.php?cache_key=f36c334d7cef843a28a60ae9669c88ad"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/dropzone-5.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body class="login-layout light-login"><style>
+* { font-family: "Open Sans"; } 
+h1, h2, h3, h4, h5 { font-family: "Open Sans"; } 
+</style>
+<div class="main-container" id="main-container">
+<div class="main-content">
+<div class="row">
+<div class="col-md-offset-3 col-md-6 col-sm-10 col-sm-offset-1">
+	<div class="login-container">
+		<div class="space-12 hidden-480"></div>
+			<div class="login-logo">
+		<img src="/images/mantis_logo.png">
+	</div>
+			<div class="space-24 hidden-480"></div>
+
+<div class="position-relative">
+	<div class="signup-box visible widget-box no-border" id="login-box">
+		<div class="widget-body">
+			<div class="widget-main">
+				<h4 class="header lighter bigger">
+					<i class="ace-icon fa fa-sign-in"></i>
+					Login				</h4>
+				<div class="space-10"></div>
+	<form id="login-form" method="post" action="login_password_page.php">
+		<fieldset>
+
+			<input type="hidden" name="return" value="index.php" />
+			<label for="username" class="block clearfix">
+				<span class="block input-icon input-icon-right">
+					<input id="username" name="username" type="text" placeholder="Username"
+						   size="32" maxlength="191" value="administrator"
+						   class="form-control autofocus">
+					<i class="ace-icon fa fa-user"></i>
+				</span>
+			</label>
+
+			<div class="space-10"></div>
+
+			<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110" value="Login" />
+		</fieldset>
+	</form>
+
+<div class="space-10"></div><div class="alert alert-warning"><p><strong>Warning:</strong> "admin" directory should be removed, or access to it restricted.</p><p><strong>Warning:</strong> You should disable the default 'administrator' account or change its password.</p></div></div>
+
+<div class="toolbar center"><a class="back-to-login-link pull-left" href="signup_page.php">Signup for a new account</a><div class="clearfix"></div></div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+</div>
+	<script type="text/javascript" src="/js/bootstrap-3.4.1.min.js"></script>
+	<script type="text/javascript" src="/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-datetimepicker-4.17.47.min.js"></script>
+	<script type="text/javascript" src="/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/js/list-1.5.0.min.js"></script>
+	<script type="text/javascript" src="/js/ace.min.js"></script>
+</body>
+
+Cookies: {PHPSESSID=19b357637e2b611fc18b784334f0c451}
+=================
+=== LOGOUT REQUEST ===
+URL: http://localhost:8989/logout_page.php
+--- RESPONSE ---
+Status code: 302
+Body: 
+Cookies: {PHPSESSID=5d57ca36e12048d18169e6072e294956, MANTIS_STRING_COOKIE=deleted, MANTIS_PROJECT_COOKIE=deleted, MANTIS_MANAGE_USERS_COOKIE=deleted, MANTIS_MANAGE_CONFIG_COOKIE=deleted}
+=================
+]]></system-out>
+  </testcase>
+  <testcase name="createAndApplyFilterTest[TestFilter](1)" classname="ui.FilterTest" time="14.142">
+    <system-err><![CDATA[груд. 24, 2025 3:15:01 ДП org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+груд. 24, 2025 3:15:01 ДП org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="loginTest[wrongUser, wrongPass, false](1)" classname="ui.LoginTest" time="0.842">
+    <failure message="Force fail to test screenshot attachment expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-err><![CDATA[груд. 24, 2025 3:15:17 ДП org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+груд. 24, 2025 3:15:17 ДП org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="loginTest[administrator, wrongPass, false](2)" classname="ui.LoginTest" time="0.89">
+    <failure message="Force fail to test screenshot attachment expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-err><![CDATA[груд. 24, 2025 3:15:20 ДП org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+груд. 24, 2025 3:15:20 ДП org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="loginTest[administrator, root, true](3)" classname="ui.LoginTest" time="0.955">
+    <failure message="Force fail to test screenshot attachment expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-err><![CDATA[груд. 24, 2025 3:15:23 ДП org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+груд. 24, 2025 3:15:23 ДП org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+  <testcase name="createProjectTest[ProjectA, Test description A](1)" classname="ui.TaskTest" time="2.675">
+    <system-err><![CDATA[груд. 24, 2025 3:15:27 ДП org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 143
+груд. 24, 2025 3:15:27 ДП org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 143.0.7499.170. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.24.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-failed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="ui.LoginTest" class="method navigator-link" hash-for-method="loginTest(administrator, wrongPass, false)">loginTest(administrator, wrongPass, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="ui.LoginTest" class="method navigator-link" hash-for-method="loginTest(wrongUser, wrongPass, false)">loginTest(wrongUser, wrongPass, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="ui.LoginTest" class="method navigator-link" hash-for-method="loginTest(administrator, root, true)">loginTest(administrator, root, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="ui.FilterTest" class="method navigator-link" hash-for-method="createAndApplyFilterTest(TestFilter)">createAndApplyFilterTest(TestFilter)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="api.FilterAPITest" class="method navigator-link" hash-for-method="createFilterTest">createFilterTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="ui.TaskTest" class="method navigator-link" hash-for-method="createProjectTest(ProjectA, Test description A)">createProjectTest(ProjectA, Test description A)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="api.TaskAPITest" class="method navigator-link" hash-for-method="createTaskTest">createTaskTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="api.LoginAPITest" class="method navigator-link" hash-for-method="invalidThenValidLoginTest">invalidThenValidLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ui.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(administrator, wrongPass, false)">
+                  </a> <!-- loginTest(administrator, wrongPass, false) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(administrator,wrongPass,false)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(wrongUser, wrongPass, false)">
+                  </a> <!-- loginTest(wrongUser, wrongPass, false) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(wrongUser,wrongPass,false)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(administrator, root, true)">
+                  </a> <!-- loginTest(administrator, root, true) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(administrator,root,true)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Force fail to test screenshot attachment expected [true] but found [false]
+	at ui.LoginTest.loginTest(LoginTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ui.TaskTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createProjectTest(ProjectA, Test description A)">
+                  </a> <!-- createProjectTest(ProjectA, Test description A) -->
+                  <span class="method-name">createProjectTest</span>
+                  <span class="parameters">(ProjectA,Test description A)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">api.TaskAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createTaskTest">
+                  </a> <!-- createTaskTest -->
+                  <span class="method-name">createTaskTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">api.LoginAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidThenValidLoginTest">
+                  </a> <!-- invalidThenValidLoginTest -->
+                  <span class="method-name">invalidThenValidLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">api.FilterAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createFilterTest">
+                  </a> <!-- createFilterTest -->
+                  <span class="method-name">createFilterTest</span>
+                  <em>
+(Valid login -> All bugs page -> Create filter -> Logout)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ui.FilterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAndApplyFilterTest(TestFilter)">
+                  </a> <!-- createAndApplyFilterTest(TestFilter) -->
+                  <span class="method-name">createAndApplyFilterTest</span>
+                  <span class="parameters">(TestFilter)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;api.FilterAPITest&quot;/&gt;
+      &lt;class name=&quot;api.LoginAPITest&quot;/&gt;
+      &lt;class name=&quot;api.TaskAPITest&quot;/&gt;
+      &lt;class name=&quot;ui.BaseUiTest&quot;/&gt;
+      &lt;class name=&quot;ui.FilterTest&quot;/&gt;
+      &lt;class name=&quot;ui.LoginTest&quot;/&gt;
+      &lt;class name=&quot;ui.TaskTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (7 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'createAndApplyFilterTest')
+data.setCell(0, 2, 'ui.FilterTest')
+data.setCell(0, 3, 14141);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createProjectTest')
+data.setCell(1, 2, 'ui.TaskTest')
+data.setCell(1, 3, 2670);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createFilterTest')
+data.setCell(2, 2, 'api.FilterAPITest')
+data.setCell(2, 3, 2269);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginTest')
+data.setCell(3, 2, 'ui.LoginTest')
+data.setCell(3, 3, 954);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginTest')
+data.setCell(4, 2, 'ui.LoginTest')
+data.setCell(4, 3, 888);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginTest')
+data.setCell(5, 2, 'ui.LoginTest')
+data.setCell(5, 3, 836);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'invalidThenValidLoginTest')
+data.setCell(6, 2, 'api.LoginAPITest')
+data.setCell(6, 3, 320);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'createTaskTest')
+data.setCell(7, 2, 'api.TaskAPITest')
+data.setCell(7, 3, 203);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">api.FilterAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createFilterTest</span>
+                <span class="method-start">35 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">api.LoginAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2378 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">invalidThenValidLoginTest</span>
+                <span class="method-start">2380 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">api.TaskAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2703 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createTaskTest</span>
+                <span class="method-start">2706 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ui.FilterTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">2916 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createAndApplyFilterTest(TestFilter)</span>
+                <span class="method-start">12678 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=createAndApplyFilterTest status=SUCCESS method=FilterTest.createAndApplyFilterTest(...)</span>
+                <span class="method-start">26823 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ui.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">27024 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">28262 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest(wrongUser, wrongPass, false)</span>
+                <span class="method-start">28678 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest status=FAILURE method=LoginTest.loginTest(java.lang.String,java.lang.Stri...)</span>
+                <span class="method-start">29521 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">30164 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">31413 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest(administrator, wrongPass, false)</span>
+                <span class="method-start">31957 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest status=FAILURE method=LoginTest.loginTest(java.lang.String,java.lang.Stri...)</span>
+                <span class="method-start">32848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33501 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">34814 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTest(administrator, root, true)</span>
+                <span class="method-start">35381 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=loginTest status=FAILURE method=LoginTest.loginTest(java.lang.String,java.lang.Stri...)</span>
+                <span class="method-start">36337 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ui.TaskTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">37275 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createProjectTest(ProjectA, Test description A)</span>
+                <span class="method-start">38658 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=createProjectTest status=SUCCESS method=TaskTest.createProjectTest(java.lang.String...)</span>
+                <span class="method-start">41334 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
