@@ -21,7 +21,7 @@ public class FilterAPITest {
         filterAPI = new FilterAPI(baseUrl);
     }
 
-    @Test(description = "Valid login -> All bugs page -> Create filter -> Logout")
+    @Test(groups = "api")
     public void createFilterTest() {
 
         LoginRequest loginRequest = new LoginRequest("administrator", "root");

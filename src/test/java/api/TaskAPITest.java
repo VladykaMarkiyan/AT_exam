@@ -21,7 +21,7 @@ public class TaskAPITest {
         taskAPI = new TaskAPI(baseUrl);
     }
 
-    @Test
+    @Test(groups = "api")
     public void createTaskTest() {
 
         LoginRequest loginRequest = new LoginRequest("administrator", "root");

@@ -17,7 +17,7 @@ public class LoginAPITest {
         loginAPI = new LoginAPI(baseUrl);
     }
 
-    @Test
+    @Test(groups = "api")
     public void invalidThenValidLoginTest() {
 
         LoginRequest invalidRequest = new LoginRequest("wrongUser", "wrongPass");
