@@ -1,23 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="AllTestsSuite" parallel="tests" thread-count="2">
-
-    <test name="LoginTests">
-        <classes>
-            <class name="ui.LoginTest"/>
-        </classes>
-    </test>
-
-    <test name="TaskTests">
-        <classes>
-            <class name="ui.TaskTest"/>
-        </classes>
-    </test>
-
-    <test name="FilterTests">
-        <classes>
-            <class name="ui.FilterTest"/>
-        </classes>
-    </test>
+<suite name="ApiTestsSuite" parallel="tests" thread-count="2">
 
     <test name="LoginApiTests" group-by-instances="true">
         <groups>
